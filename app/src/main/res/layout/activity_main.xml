@@ -1,0 +1,163 @@
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:fab="http://schemas.android.com/apk/res-auto"
+	xmlns:ads="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+
+	<android.support.design.widget.CoordinatorLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#eeeeee"
+		android:fitsSystemWindows="true">
+		<ListView
+			android:id="@+id/main_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="?attr/actionBarSize"
+			android:padding="4dp"
+			android:divider="@null" />
+		<android.support.design.widget.AppBarLayout
+			android:id="@+id/app_bar_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+			android:fitsSystemWindows="true">
+
+
+			<android.support.v7.widget.Toolbar
+					android:id="@+id/toolbar"
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:background="@color/primary_material"
+					android:fitsSystemWindows="true"
+					app:layout_collapseMode="pin"/>
+
+		</android.support.design.widget.AppBarLayout>
+
+
+		<com.github.clans.fab.FloatingActionMenu
+			android:id="@+id/fam_menu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_gravity="bottom|right"
+			fab:menu_fab_size="normal"
+			fab:menu_showShadow="true"
+			fab:menu_shadowColor="#66000000"
+			fab:menu_shadowRadius="4dp"
+			fab:menu_shadowXOffset="1dp"
+			fab:menu_shadowYOffset="3dp"
+			fab:menu_colorNormal="@color/accent_material_light"
+			fab:menu_colorPressed="#E75043"
+			fab:menu_colorRipple="#99FFFFFF"
+			fab:menu_animationDelayPerItem="50"
+			fab:menu_buttonSpacing="0dp"
+			fab:menu_labels_margin="0dp"
+			fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+			fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+			fab:menu_labels_paddingTop="4dp"
+			fab:menu_labels_paddingRight="8dp"
+			fab:menu_labels_paddingBottom="4dp"
+			fab:menu_labels_paddingLeft="8dp"
+			fab:menu_labels_padding="8dp"
+			fab:menu_labels_textColor="#FFFFFF"
+			fab:menu_labels_textSize="14sp"
+			fab:menu_labels_cornerRadius="3dp"
+			fab:menu_labels_colorNormal="#333333"
+			fab:menu_labels_colorPressed="#444444"
+			fab:menu_labels_colorRipple="#66FFFFFF"
+			fab:menu_labels_showShadow="true"
+			fab:menu_labels_singleLine="false"
+			fab:menu_labels_ellipsize="none"
+			fab:menu_labels_maxLines="-1"
+			fab:menu_labels_position="left"
+			fab:menu_openDirection="up"
+			fab:menu_backgroundColor="@android:color/transparent">
+
+			<com.github.clans.fab.FloatingActionButton
+				android:id = "@+id/fab_yogeum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				fab:fab_label="버스요금표"
+				fab:fab_size="mini" />
+
+			<com.github.clans.fab.FloatingActionButton
+				android:id = "@+id/fab_help"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				fab:fab_label="도움말"
+				fab:fab_size="mini" />
+
+			<com.github.clans.fab.FloatingActionButton
+				android:id = "@+id/fab_seting"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				fab:fab_label="앱 정보"
+				fab:fab_size="mini"/>
+		</com.github.clans.fab.FloatingActionMenu>
+
+	</android.support.design.widget.CoordinatorLayout>
+
+	<ScrollView
+		android:id="@+id/search_ll"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#eeeeee"
+		android:layout_marginTop="?actionBarSize"
+		android:fitsSystemWindows="true"
+		android:visibility="gone">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/header1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/primary_material"
+				android:paddingBottom="3dp"
+				android:paddingLeft="5dp"
+				android:paddingTop="3dp"
+				android:text="노선 목록"
+				android:textColor="@android:color/white"
+				android:textSize="18sp"
+				android:visibility="gone"/>
+
+			<ListView
+				android:id="@+id/searchlist1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:padding="3dp"/>
+
+			<TextView
+				android:id="@+id/header2"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/primary_material"
+				android:paddingBottom="3dp"
+				android:paddingLeft="5dp"
+				android:paddingTop="3dp"
+				android:text="정류장 목록"
+				android:textColor="@android:color/white"
+				android:textSize="18sp"
+				android:visibility="gone"/>
+
+			<ListView
+				android:id="@+id/searchlist2"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:padding="3dp"/>
+		</LinearLayout>
+	</ScrollView>
+</FrameLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory
+		android:title="DB 정보"
+		android:key="db_info">
+
+		<Preference
+			android:title="현재 DB 버전"
+			android:key="db_version_now"/>
+
+		<Preference
+			android:title="최신 DB 버전"
+			android:key="db_version_new"/>
+
+		<Preference
+			android:title="조암버스DB 어플"
+			android:summary="누르면 조암버스DB 어플로 이동합니다."
+			android:key="db_app"/>
+
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="어플 정보"
+		android:key="app_info">
+
+		<Preference
+			android:title="현재 어플 버전"
+			android:key="app_version_now"/>
+
+		<Preference
+			android:title="최신 어플 버전"
+			android:key="app_version_new"/>
+
+		<Preference
+			android:title="페이스북 조암버스 페이지"
+			android:summary="누르면 페이스북 조암버스 페이지로 이동합니다."
+			android:key="facebook_page"/>
+
+		<Preference
+			android:title="Play Store 조암버스 페이지"
+			android:summary="누르면 Play Store 조암버스 페이지로 이동합니다."
+			android:key="playstore_page"/>
+
+	</PreferenceCategory>
+
+</PreferenceScreen>

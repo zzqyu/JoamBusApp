@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">조암버스</string>
+
+	<string name="update">-\t장류장페이지 오류 수정</string>
+
+	<string name="updatesh">"2.0.3 업데이트 사항/도움말"</string>
+
+</resources>

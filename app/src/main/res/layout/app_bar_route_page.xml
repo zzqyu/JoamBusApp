@@ -1,0 +1,109 @@
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:fab="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white"
+	android:fitsSystemWindows="true">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/app_bar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+		android:fitsSystemWindows="true">
+
+
+
+		<android.support.design.widget.CollapsingToolbarLayout
+			android:id="@+id/collapsing_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="170dp"
+			android:background="@color/primary_material"
+			app:layout_scrollFlags="scroll"
+			app:contentScrim="@color/primary_material"
+			android:fitsSystemWindows="true">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="170dp"
+				android:orientation="horizontal"
+				android:layout_gravity="top"
+				android:id="@+id/time_table_layout"
+				android:paddingTop="?actionBarSize"
+				android:paddingLeft="5dp"
+				android:paddingRight="5dp"
+				android:paddingBottom="5dp"
+				android:fitsSystemWindows="true"
+				app:layout_collapseMode="parallax">
+
+
+			</LinearLayout>
+
+
+		</android.support.design.widget.CollapsingToolbarLayout>
+
+	</android.support.design.widget.AppBarLayout>
+
+
+
+	<com.dolapps.joambus.MyNestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<LinearLayout
+			android:id="@+id/lin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:visibility="visible">
+
+			<com.dolapps.joambus.WrapContentHeightViewPager
+				android:id="@+id/pager"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"/>
+
+
+		</LinearLayout>
+
+
+	</com.dolapps.joambus.MyNestedScrollView>
+
+	<android.support.design.widget.TabLayout
+		android:id="@+id/tabLayout"
+		android:layout_width="match_parent"
+		android:layout_height="?actionBarSize"
+		android:background="@color/primary_material_dark"
+		app:tabMode="fixed"
+		app:tabTextColor="@android:color/white"
+		app:tabSelectedTextColor="?attr/colorAccent"/>
+
+	<com.github.clans.fab.FloatingActionMenu
+			android:id="@+id/fam_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_anchor="@id/tabLayout"
+			app:layout_anchorGravity="right|end"
+			android:layout_marginTop="30dp"
+			fab:menu_icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+			app:theme="@style/ThemeOverlay.AppCompat.Light"
+			fab:menu_openDirection="down"/>
+
+
+
+
+	<com.github.clans.fab.FloatingActionButton
+		android:id="@+id/fab_refresh"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_gravity="bottom|right"
+		android:layout_marginBottom="10dp"
+		android:layout_marginRight="10dp"
+		android:src="@mipmap/ic_refresh"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
